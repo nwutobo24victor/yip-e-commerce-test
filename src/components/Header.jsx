@@ -1,5 +1,8 @@
 
-import { useState } from "react";   
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+
 // Navigation links data
 import navLinks from "../assets/js/menu";
 
@@ -24,13 +27,13 @@ const Header = () => {
 
                 <nav className="hidden md:flex space-x-8 text-gray-600 font-medium">
                     {navLinksData.map((item, index) => (
-                        <a
+                        <Link
                             key={index}
-                            href={item.link}
+                            to={item.link}
                             className="text-black pb-1 hover:border-b-2 hover:border-black"
                         >
                             {item.label}
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
@@ -49,20 +52,26 @@ const Header = () => {
                                 {item.label}
                             </a>
                         ))}
+
+                        <Link to="/authentication" className="bg-black hover:bg-gray-700 text-white px-5 py-2 rounded-lg flex items-center justify-center w-full gap-2 text-sm font-medium">
+                            <i className="fa-regular fa-user"></i>
+                            Login
+                        </Link>
                     </nav>
                 </aside>
 
                 <div className="flex items-center gap-6">
-                    <button className="text-gray-700 hover:text-black">
+                    <button className="text-gray-700 hover:text-black relative">
                         <i className="fa-solid fa-cart-shopping text-lg"></i>
+                        <span className="block text-xs rounded bg-red-500 text-white p-0.5 h-4 min-w-4 absolute -top-2 -right-3">12</span>
                     </button>
                     <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-black hover:text-gray-700 p-1 rounded-lg flex items-center gap-2 text-xl lg:hidden">
                         <i className="fa fa-bars" aria-hidden="true"></i>
                     </button>
-                    <button className="bg-black hover:bg-gray-700 text-white px-5 py-2 rounded-lg lg:flex items-center gap-2 text-sm font-medium hidden">
+                    <Link to="/authentication" className="bg-black hover:bg-gray-700 text-white px-5 py-2 rounded-lg lg:flex items-center gap-2 text-sm font-medium hidden">
                         <i className="fa-regular fa-user"></i>
                         Login
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -17,6 +17,8 @@ import "react-toastify/dist/ReactToastify.css";
 // pages
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
+import CheckOut from "./pages/CheckOut";
+import Authentication from "./pages/Authentication";
 
 function App() {
 
@@ -40,6 +42,8 @@ function App() {
           <Routes>
             <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
+            <Route path="/checkout" element={<CheckOut />} />
+            <Route path="/authentication" element={<Authentication />} />
           </Routes>
         </div>
       </Router>

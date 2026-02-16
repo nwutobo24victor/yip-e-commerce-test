@@ -40,7 +40,7 @@ const ViewProduct = () => {
                             </button>
                         </div>
 
-                        <button type="button" className="w-full bg-black hover:bg-gray-600 text-white py-3 rounded-lg mt-4">Add to Cart</button>
+                        <button type="button" className="w-full bg-black hover:bg-gray-700 text-white py-3 rounded-lg mt-4">Add to Cart</button>
                     </div>
                 </div>
             </div>

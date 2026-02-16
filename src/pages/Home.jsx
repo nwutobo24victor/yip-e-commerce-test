@@ -225,7 +225,7 @@ const Home = () => {
                 </header>
 
                 {/* main     */}
-                <main className="max-w-8xl mx-auto px-8 py-8 mt-20">
+                <main className="max-w-8xl mx-auto px-4 lg:px-8 py-8 mt-20">
 
                     <div className="flex lg:flex-row flex-col gap-4 mb-10 w-full">
                         <div className="flex lg:flex-row flex-col gap-4 mb-10 w-full">
